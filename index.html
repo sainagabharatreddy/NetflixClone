@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>NetFlix clone</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins',sans-serif;
+            box-sizing: border-box;
+        }
+        body{
+            background: black;
+            color: white;
+        }
+        
+        .header{
+            height: 100vh;
+            width: 100%;
+            color: white;
+            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7) ), url(images/header-image.png);
+            background-position: center;
+            background-size: cover;
+            padding: 10px 8%;
+            position: relative;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+             margin: 15px;
+             color: white;
+          
+           
+        }
+         nav img{
+            height: 40px;
+           
+        }
+        .btn{
+            color: white;
+            height: 30px;
+            width: 75px;
+            background-color: rgb(223, 12, 12);
+            border: 1px solid rgb(223, 12, 12);
+            border-radius: 5px;
+            font-style: normal;
+            font-weight: bold;
+            margin: 40px;
+        }
+        .container{
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50% ,-50%);
+            text-align: center;
+          
+            
+         }
+         .container h1{
+            font-size: 40px;
+            color: white;
+            line-height: 50px;
+     
+
+         }
+         .container h3{
+            font-size: 20px;
+            color: white;
+            line-height: 50px;
+
+         }
+         .container h4{
+            font-size: 16px;
+            color: white;
+            line-height: 60px;
+
+         }
+       
+
+          .search{
+            line-height: 70px;
+            height: 50px;
+            width: 400px;
+            background-color: rgb(10, 9, 9);
+            border: 2px solid rgb(8, 8, 8);
+            color: white;
+            border-radius: 3px;
+            font-size: larger;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            opacity: 0.9;
+            text-align: center;
+         }
+         .btn2{
+            height: 50px;
+            width: 170px;
+            line-height: 50px;
+            opacity: 0.8;
+            background-color: red;
+            border-radius: 3px;
+            border: 2px solid red;
+            color: rgb(245, 244, 244);
+            font-size: large;
+            font-weight: bold;
+            padding-bottom: 3px;
+            text-align: center;
+            
+            justify-content: center;
+            align-items: center;
+         }
+
+         .content
+         {
+            background: black;
+            color: white;
+         }
+         .main{
+            padding: 50px 12%;
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            align-items: center;
+            border: 5px solid grey;
+
+
+         }
+         .img
+         {
+            
+            
+            flex-basis: 50%;
+            margin-bottom: 20px;
+         }
+         .text
+         {
+            flex-basis: 50%;
+            margin-bottom: 20px;
+         }
+         .img img{
+            display: block;
+            width: 90%;
+            margin: auto;
+         }
+         .main2{
+            padding: 50px 12%;
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            align-items: center;
+            border: 5px solid grey;
+         }
+
+         .main3{
+            padding: 50px 12%;
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            align-items: center;
+            border: 5px solid grey;
+         }
+         .main4{
+            padding: 50px 12%;
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            align-items: center;
+            border: 5px solid grey;
+         }
+         .footer{
+            padding: 50px 12%;
+            text-align: center;
+            
+            width: 100%;
+            
+            border: 5px solid grey;
+            line-height: 60px;
+           margin: 20px 20px;
+           cursor: pointer;
+         }
+         .a{
+            height: 50px;
+            width: 100;
+            background-color: grey;
+            color: azure;
+            text-align: start;
+            font-size: 35px;
+            opacity: 0.7;
+            border: 1px solid black;
+            border-radius: 5px ;
+                        
+         }
+         .b{
+            height: 50px;
+            width: 100;
+            background-color: grey;
+            color: azure;
+            text-align: start;
+            font-size: 35px;
+            opacity: 0.7;
+            border: 1px solid black;
+            border-radius: 5px ;
+            line-height: 60px;
+            
+         }
+         .c{
+            height: 50px;
+            width: 100;
+            background-color: grey;
+            color: azure;
+            text-align: start;
+            font-size: 35px;
+            opacity: 0.7;
+            border: 1px solid black;
+            border-radius: 5px ;
+            
+         }
+         .d{
+            height: 50px;
+            width: 100;
+            background-color: grey;
+            color: azure;
+            text-align: start;
+            font-size: 35px;
+            opacity: 0.7;
+            border: 1px solid black;
+            border-radius: 5px ;
+            
+         }
+         .e{
+            height: 50px;
+            width: 100;
+            background-color: grey;
+            color: azure;
+            text-align: start;
+            font-size: 35px;
+            opacity: 0.7;
+            border: 1px solid black;
+            border-radius: 5px ;
+            
+         }
+         .f{
+            height: 50px;
+            width: 100;
+            background-color: grey;
+            color: azure;
+            text-align: start;
+            font-size: 35px;
+            opacity: 0.7;
+            border: 1px solid black;
+            border-radius: 5px ;
+            
+         }
+         .g{
+            font: bold;
+            font-size: 40px;
+         }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+            <nav>
+                <img src="images/logo.png">
+                <div>
+                    <button class="btn">Sign up</button>
+
+                </div>
+            </nav>
+            <div class="container">
+                        <h1>Unlimited movies, TV shows and more</h1>
+                        <h3>Watch anywhere. Cancel anytime.</h3>
+                        <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
+
+                        <div class="form">
+                        <form action="next.html">
+                            <input type="search" name="search" class="search" placeholder="Email-Address"> <button class="btn2">GET STARTED ></button><br><br>
+                        </form>
+                        </div>
+            </div>
+    </div>
+    <div class="content">
+                <div class="main">
+                            <div class="text">
+                                <h1>Enjoy on your TV</h1>
+                                <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+                            </div>
+                            <div class="img">
+                                <img src="images/feature-1.png" height="400">
+                            </div>
+                </div>
+
+                <div class="main2">
+                            <div class="img">
+                                <img src="images/feature-2.png" height="400">
+                            </div>
+                            <div class="text">
+                                    <h1>Download your shows to watch offline</h1>
+                                    <p>Save your favourites easily and always have something to watch.</p>
+                            </div>
+                    
+                </div>
+                <div class="main3">
+
+                            <div class="text">
+                                    <h1>Watch everywhere</h1>
+                                    <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+                            </div>
+                            <div class="img">
+                                <img src="images/feature-3.png" height="400">
+                            </div>
+                            
+            
+                 </div>
+                 <div class="main4">
+
+                            <div class="img">
+                                <img src="images/feature-4.png" height="400">
+                            </div>
+                            <div class="text">
+                                    <h1>Create profiles for kids</h1>
+                                    <p>Send children on adventures with their favourite characters in a space made just for them—free with your membership..</p>
+                            </div>
+                            
+                    
+    
+         </div>
+         <div class="footer">
+                    <h1>
+                        Frequently asked question to Nexflix?
+
+                    </h1>
+                    <div class="a">What is Netflix?</div>
+                    <div class="b"> How much does Netflix cost?</div>
+                    <div class="c"> Where can I watch?</div>
+                    <div class="d"> How do I cancel?</div>
+                    <div class="e"> What can I watch on Netflix?</div>
+                    <div class="f"> Is Netflix good for kids?</div>
+                    <div class="g"> Read</div>
+         </div>
+
+                
+
+    </div>
+ 
+</body>
+</html>
